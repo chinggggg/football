@@ -1,0 +1,610 @@
+*{
+    /* outline: 1px solid #eee; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+}
+
+.primary--color{
+    color: #D24B2B;
+    color: rgb(210,75,43);
+}
+.secondary--color{
+    color: #56B8A5;
+    color: rgb(86, 184, 165);
+    color: #F2EDD8;
+    color: rgb(242, 237, 216);;
+
+    color: #1E1E1E;
+    color: #E9CB66;
+}
+body, html{
+    margin: 0;
+    width: 100vw;
+    height: 300vh;
+    overflow-x: hidden;
+    
+
+}
+.container{
+    width: 90%;
+    max-width: 960px;
+
+}
+/* ----------------------------------- */
+
+header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    z-index: 100;
+}
+header.fixed{
+    
+    transform: translateY(-70px);
+}
+
+
+.navbar{
+    height: 65px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+#logo{
+    width: 150px;
+    height: 50px;
+    fill: #fff; 
+}
+#logo.logoScroll{
+     fill: rgb(86, 184, 165);
+
+}
+.hero{
+    position: relative
+}
+.hero-bg{
+    width: 100vw;
+    height: 900px;
+    /* min-height: 800px; */
+    transition: .3s;
+    background: linear-gradient(165deg, rgb(210,75,43)60%,rgb(86, 184, 165)60%),rgb(86, 184, 165);
+    
+     /* 165deg
+     animation: hero-bg-anim .5s ;
+     animation-fill-mode: forwards; */
+    }
+    
+
+@keyframes hero-bg-anim{}
+   
+a.nav-link{
+    color: #fff;
+    font-weight: 500;
+    margin: 0 10px;
+    letter-spacing: 1px;
+    opacity: .7;
+
+}
+a.nav-link:hover{
+    color: #fff;
+    opacity: 1;
+}
+
+
+a.nav-link.scroll{
+    color: #1E1E1E;
+}
+
+a.nav-link.scroll:hover{
+    opacity: 1;
+    color: #D24B2B;
+}
+
+.kv-pitch{
+    width: 120%;
+    position: absolute;
+    top: 30%;
+    right: -15%;
+    transition: .1s;
+    opacity: 1;
+}
+
+.kv-pitch-pc{
+    transform: translateY(0px);
+    animation: kv-pitch-anim .5s ease-out;
+}
+
+@keyframes kv-pitch-anim{
+    0%{ width: 200%;
+        transform: translateY(-70px);
+        right: -5%;
+        
+
+    }
+    100%{
+        transform: translateY(0px);
+        width: 120%;
+        
+    }
+}
+.kv-heading{
+    
+    position: absolute;
+    top:12%;
+    left: 6%;
+    font-size: 6rem;
+    line-height: 3.5rem;
+    font-weight: 900;
+    color: rgb(242, 237, 216);
+    z-index: 1;
+}
+.kv-heading1{
+    animation-duration: .05s;
+}
+.kv-heading2{
+    
+    animation-delay: .03s;
+}
+.kv-heading3{
+    animation-duration: .03s;
+    animation-delay: .08s;
+}
+.kv-heading4{
+    animation-duration: .03s;
+    animation-delay: .11s;
+}
+.kv-subheading{
+    font-size: 1.1rem;
+    font-weight: 400;
+    position: absolute;
+    letter-spacing: 5px;
+    top: 115%;
+    border-top: 1px solid #E9CB66;
+    border-bottom: 1px solid #E9CB66;
+    opacity: 1;
+    padding: 0;
+    animation: kv-subheading 1s .05s ease-out;
+    animation-delay:.3s ;
+    animation-fill-mode: forwards;
+    
+    
+}
+
+@keyframes kv-subheading{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#kv-pitch{
+    fill: #56b8a5;
+}
+
+.kv-man{
+    position: absolute;
+    width: 750px;
+    z-index: 2;
+    top: 40%;
+    right: 15%;
+    transition: .3s;
+    animation: kv-man .4s .1s forwards ease-out;
+}
+@keyframes kv-man{
+    0%{
+        transform: translateY(100px);
+        opacity: .2;
+        width: 120%;
+        right: 30%;
+        rotate: 20deg;
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        right: 15%;
+    }
+}
+.kv-man img{
+    width: 100%
+}
+
+.kv-man::after{
+    position: relative;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: url("./images/3x/kv-left.png") center center no-repeat;
+    background-size: contain;
+    left: -20%;
+    bottom: 10%;
+
+    z-index: 0;
+}
+.kv-man::before{
+    position: relative;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 150px;
+    height: 50px;
+    background: url("./images/3x/kv-right.png") center center no-repeat;
+    background-size: contain;
+    right:30%;
+    bottom: 20%;
+}
+    
+.kv-rules{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 25%;
+    height: 20%;
+    background: url("./images/3x/kv-rules-pc.png") center center no-repeat;
+    background-size: contain;
+
+}
+
+/* ------------------------------- */
+
+.quote{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(86, 184, 165);
+    transition: .3s;
+    position: relative;
+    display: flex;
+    /* border: 1px solid red; */
+    
+    
+}
+
+.hero-bg.bg-black{
+    background: #1E1E1E;
+}
+.quote.bg-black{
+    background: #1E1E1E;
+}
+
+.quote-img{
+    width: 3200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.quote-bg{
+    width: 90%;
+    max-width: 960px;
+    height: 500px;
+    /* background-color: #eeeeee; */
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%) ;
+ 
+}
+.quote-bg-me{
+    background: #1E3A51;
+    position: relative;
+}
+
+.updown{
+    color: #F2EDD8;
+    font-size: 7rem;
+    font-weight: 600; 
+    opacity: .7;
+}
+.quote-up{
+    position: absolute;
+    top: -10%;
+    left: 30%;
+}
+.quote-down{
+    position: absolute;
+    bottom: -20%;
+    left: 30%;
+}
+.quote-content{
+    position: absolute;
+    width: 40%;
+    font-size: 2rem;
+    font-weight: 700; 
+    left: 15%;
+    top: 20%;
+    color: #F2EDD8;
+    line-height: 2.5rem;
+
+}
+.quote-name{
+    position: absolute;
+    width: 40%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 2px;
+    left: 15%;
+    bottom: 20%;
+    color: #F2EDD8;
+}
+.quote-number{
+    
+    position: absolute;
+    /* width: 8%; */
+    padding: 0px 5px 10px 5px;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: center;
+    right: 3%;
+    top: 6%;
+    color: transparent;
+    /* background: red; */
+    border-bottom: 1px solid #80ACC9;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #80ACC9;
+    opacity: .7;
+    
+}
+.quote-player{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    background: url("./images/3x/messi.png") center center no-repeat;
+    background-size: contain;
+    right: 5%;  
+    bottom: -5%;
+}
+
+
+/* RWD-----------------------------------------------
+----------------------------------------------------- */
+
+@media (max-width: 1199.98px) {
+    .kv-pitch{
+        width: 150%;
+        position: absolute;
+        right: -20%;
+        top: 35%;
+    
+    }
+    .kv-heading{  
+        font-size: 4rem;
+        line-height: 2rem;
+
+    }
+    .kv-subheading{
+        font-size: 1rem;
+        padding: 10px 0px;
+    }
+    
+}
+
+@media (max-width: 991.98px) {
+    .kv-pitch-pc{
+        transform: translateY(0px);
+        right: -20%;
+        width: 150%;
+        animation: kv-pitch-anim .5s ease-out;
+        animation-fill-mode: forwards;
+        
+    }
+    @keyframes kv-pitch-anim{
+        0%{ width: 250%;
+            transform: translateY(-70px);
+            right: -5%;
+            
+    
+        }
+        100%{
+            transform: translateY(0px);
+            width: 150%;
+            right: -20%;
+            
+        }
+    }
+    .kv-pitch{
+        
+        /* width: 150%; */
+        position: absolute;
+        /* right: -20%; */
+        top: 40%;
+    
+    }
+    
+    .kv-man{
+        width: 550px;
+        z-index: 2;
+        top: 50%;
+        right: 10%;
+        animation: kv-man .4s .1s forwards ease-out;
+        }
+        @keyframes kv-man{
+            0%{
+                transform: translateY(100px);
+                opacity: .2;
+                width: 150%;
+                right: 30%;
+                rotate: 20deg;
+        
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+                right: 10%;
+                /* width: 100%; */
+            }
+        }
+        .updown{
+            font-size: 5rem;
+        }
+        .quote-up{
+            position: absolute;
+            top: -7%;
+            left: 30%;
+        }
+        .quote-down{
+            position: absolute;
+            bottom: -15%;
+            left: 30%;
+        }
+        .quote-content{
+            position: absolute;
+            width: 70%;
+            left: 10%;
+            top: 10%;
+            line-height: 2rem;
+        
+        }
+        .quote-name{
+            position: absolute;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            left: 15%;
+            bottom: 20%;
+        }
+        .quote-number{
+            position: absolute;
+            /* width: 8%; */
+            padding: 0px 5px 10px 5px;
+            font-size: 4rem;
+            line-height: 4rem;
+            right: 3%;
+            top: 6%;
+    
+           
+            
+        }
+        .quote-player{
+            position: absolute;
+            right: 5%;  
+            bottom: -5%;
+        }
+ }
+ 
+
+
+@media (max-width: 767.98px) {
+    .kv-pitch-pc{
+        transform: translateY(0px);
+        right: -35%;
+        animation: kv-pitch-anim .5s ease-out;
+        animation-fill-mode: forwards;
+        
+    }
+    @keyframes kv-pitch-anim{
+        0%{ width: 250%;
+            transform: translateY(-70px);
+            right: -5%;
+            
+    
+        }
+        100%{
+            transform: translateY(0px);
+            width: 200%;
+            right: -35%;
+            
+        }
+    }
+    .kv-pitch{
+        
+        width: 200%;
+        position: absolute;
+        right: -30%;
+        top: 47%;
+    }
+    .kv-heading{  
+        font-size: 4rem;
+        line-height: 2rem;
+
+    }
+    .kv-subheading{
+        font-size: 1rem;
+        padding: 10px 0px;
+    }
+    .kv-man{
+    width: 570px;
+    z-index: 2;
+    top: 50%;
+    right: 10%;
+    animation: kv-man .4s .1s forwards ease-out;
+    }
+    @keyframes kv-man{
+        0%{
+            transform: translateY(100px);
+            opacity: .2;
+            width: 150%;
+            right: 30%;
+            rotate: 20deg;
+        }
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+            right: 10%;
+        }
+    }
+
+    .kv-rules{
+        position: absolute;
+        top: 12%;
+        right:5%;
+        width: 25%;
+        height: 20%;
+        background: url("./images/3x/kv-rules-m.png") center center no-repeat;
+        background-size: contain;
+    }
+
+   
+}
+
+@media (max-width: 575.98px) { 
+    .kv-heading{  
+        font-size: 2.5rem;
+        line-height: 1.4rem;
+    }
+    .kv-subheading{
+        font-size: .8rem;
+        padding: 5px 0px;
+    }
+    .kv-man{
+        width: 350px;
+        z-index: 2;
+        top: 40%;
+        right: 10%;
+        animation: kv-man .4s .1s forwards ease-out;
+        }
+
+    @keyframes kv-man{
+        0%{
+            transform: translateY(100px);
+            opacity: .2;
+            width: 150%;
+            right: 30%;
+            rotate: 20deg;
+    
+        }
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+            right: 7%;
+        }
+
+    }
+
+    .kv-rules{
+        position: absolute;
+        top: 12%;
+        right: 5%;
+        width: 25%;
+        height: 20%;
+        background: url("./images/3x/kv-rules-m.png") center center no-repeat;
+        background-size: contain;
+    }
+
+ }
