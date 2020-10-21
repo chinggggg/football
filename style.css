@@ -1,5 +1,4 @@
 *{
-    /* outline: 1px solid #eee; */
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
@@ -20,8 +19,8 @@
 }
 body, html{
     margin: 0;
-    width: 100vw;
-    height: 300vh;
+    width: 100%;
+    /* height: 300vh; */
     overflow-x: hidden;
     
 
@@ -66,7 +65,7 @@ header.fixed{
 }
 .hero-bg{
     width: 100vw;
-    height: 900px;
+    height: 800px;
     /* min-height: 800px; */
     transition: .3s;
     background: linear-gradient(165deg, rgb(210,75,43)60%,rgb(86, 184, 165)60%),rgb(86, 184, 165);
@@ -254,13 +253,14 @@ a.nav-link.scroll:hover{
 
 .quote{
     width: 100%;
-    height: 900px;
+    height: 800px;
     background-color: rgb(86, 184, 165);
     transition: .3s;
     position: relative;
     display: flex;
     /* border: 1px solid red; */
-    
+    background-attachment: fixed;
+    overflow: hidden;
     
 }
 
@@ -288,7 +288,6 @@ a.nav-link.scroll:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-60%) ;
- 
 }
 .quote-bg-me{
     background: #1E3A51;
@@ -349,8 +348,7 @@ a.nav-link.scroll:hover{
     border-bottom: 1px solid #80ACC9;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #80ACC9;
-    opacity: .7;
-    
+    opacity: .7; 
 }
 .quote-player{
     position: absolute;
@@ -361,10 +359,374 @@ a.nav-link.scroll:hover{
     right: 5%;  
     bottom: -5%;
 }
+/* .info{ */
+    /* height: 900px; */
+    /* position: relative; */
+/* } */
+.info-container{
+    width: 100%;
+    height: 100%;
+    background:url("./images/3x/info-pitch-pc-2.jpg") -1% -1% no-repeat, #56B8A5;
+    background-size: 101%;
+    /* overflow-y: scroll ; */
+    /* background-attachment: fi, scroll; */
+    
+
+}
+.info-item{
+    margin: -3% 10%;
+    color: #1E1E1E;
+    
+}
+.info-title-number{
+    font-size: 16rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 14rem;
+    letter-spacing: -.5rem ;
+    /* padding: 2%; */
+}
+.info-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 3% 0 ;
+    padding: 0 1% 0 1%;
+
+}
+.info-text{
+    font-size: 1rem;
+    line-height: 170%;
+    letter-spacing: 1px;
+    opacity: .7;
+    padding: 0 1% 0 1%;
+}
+
+.info-minute{
+    margin: 30% 10% 0 10%;
+}
+
+/* .info-billion{
+    margin: 0 10% 10% 10%;
+} */
+.info-table-football{
+    padding: 10% 0;
+    width: 100%;
+    height: 1000px;
+    background: url("./images/3x/info-bottom_1.png") left 101% no-repeat, rgb(86, 184, 165);
+    background-size: 100%;
+}
+
+/* .table-title{
+    margin-top: 10%;
+} */
 
 
-/* RWD-----------------------------------------------
------------------------------------------------------ */
+.table-title h2{
+    font-size: 4rem;
+    font-weight: 900;
+}
+.table-title h5{
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .4rem;
+}
+
+
+.tab-img{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 5%;
+    right: -5%;
+    
+    background: url("./images/3x/table-1.png") right center no-repeat;
+    background-size: contain;
+}
+
+.tab-btn-box{
+    height: 150px;
+    top:20%;
+    left: 20%;
+}
+
+.tab-btn{
+
+    width: 55px;
+    height: 55px;
+    background: #025959;
+    border-radius: 7px;
+    
+}
+.btn-up-arrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12.5px 21.7px 12.5px;
+    border-color: transparent transparent #f2edd8 transparent;
+}
+.btn-down-arrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 21.7px 12.5px 0 12.5px;
+    border-color: #f2edd8 transparent transparent transparent;
+
+}
+.football-rules-item{
+    width: 100%;
+    /* height: 1000px; */
+    padding: 10% 0;
+    background: #F2EDD8;
+}
+
+.rules-box{
+    width: 100%;
+}
+
+.rules-title{
+    text-align: center;
+}
+.xl-title{
+    font-size: 2.5em;
+    letter-spacing: .2rem;
+    font-weight: 300;
+    color: #025959;
+    margin-bottom: 5%;
+    
+}
+.mm-title{
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    color: #1E1E1E;
+    opacity: .7;
+    font-weight: 300;
+    text-align: center;
+    line-height: 150%;
+    
+}
+.rules-img{
+    width: 100%;
+    height: 300px;
+    /* padding: 0; */
+    
+    border-radius: 5px 0 0 5px ;
+}
+
+.rules-img-card{
+    background: url("./images/150ppi/cards.jpg") center center no-repeat;
+    background-size: cover;
+}
+.rules-img-corner{
+    background: url("./images/150ppi/corner.jpg") center center no-repeat;
+    background-size: cover;
+}
+.rules-img-offside{
+    background: url("./images/150ppi/offside.jpg") center center no-repeat;
+    background-size: cover;
+}
+.rules-img-penalty{
+    background: url("./images/150ppi/penalty.jpg") center center no-repeat;
+    background-size: cover;
+}
+.rules-content{
+    width: 100%;
+    height: 300px;
+    background: #fafafa;
+    border-radius: 0 5px 5px 0 ;
+    /* box-sizing: border-box; */
+    /* padding: 50px; */
+}
+.rules-content h3{
+    padding: 0 5% 3% 5%;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1E1E1E;
+    opacity: .9;
+}
+.rules-content p{
+    padding: 0 5%;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 200%;
+    text-align: justify;
+    opacity: .8;
+    color: #1E1E1E;
+    opacity: .9;
+}
+.rules-item{
+    margin: 10% 0;
+}
+.games{
+    height: 300px;
+    position: relative;
+    background: #025959 ;
+    background-size: 110%;
+}
+.games-bar{
+    position: relative;
+    width: 120px;
+    height: 55px;
+    left: -70px;
+    top:50px;
+    background-color: #333333;
+    border-radius: 60px;
+}
+.games-ball{
+    position: absolute;
+    height: 50px;
+    top:2px;
+    left: 2px;
+
+}
+.games-ball img{
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.games-goal{
+    height: 100px;
+    width: 100px;
+    background: url("./images/3x/game-goal.png")center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 5;
+    top: -42px;
+    right: -250px;
+}
+
+.games-goal-img{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background: url("./images/3x/game-goal-img.png")center center no-repeat;
+    background-size: contain;
+    top: -90px;
+    right: -260px;
+    z-index: 6;
+}
+.games-info{
+    height: 900px;
+    background:#025959 ;
+}
+.games-title h2.xl-title{
+    color: #E9CB66;
+}
+.games-title h4.mm-title{
+    color: #DFDFDF;
+}
+.btn-games{
+    width: 100%;
+    height: 200px;
+    /* background-color: #fff; */
+    position: relative;
+    color: #DFDFDF;
+    
+}
+
+.btn-games h4{
+    
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    position: absolute;
+    top: 110%;
+    left: 50%;transform: translateX(-50%);
+    transition: .2s;
+    /* bottom: 0px; */
+}
+.btn-games:hover{
+    height: 250px;
+    color: #E9CB66;
+    /* box-shadow: 0px 0px 3px rgba(0,0,0,.3); */
+}
+.btn-fifa img:hover, .btn-eu img:hover,.btn-cham img:hover{
+    transform: rotate(-7deg);  
+}
+
+.btn-fifa img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.btn-eu img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.btn-cham img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.games-box{
+    width: 90%;
+}
+
+.games-content{
+
+    width: 90%;
+    height: 250px;
+    background: #F2EDD8;
+    border-radius: 5px;
+}
+
+.join-line h5{
+    width: 150%;
+    line-height: 35px;
+    background: #D24B2B;
+    font-weight: 700;
+    color: #E9CB66;
+    letter-spacing: 1px;
+    font-size: 2.6rem;
+    margin: 0;
+}
+.mail-box{
+    width: 100%;
+    height: 400px;
+    background: #56B8A5;
+}
+
+.mailimg{
+    width: 400px;
+    max-width: 90%; 
+    height: 200px;
+    background: #D24B2B;
+}
+.mail-box form{
+    width: 400px;
+    max-width: 90%;
+}
+#exampleInputEmail1{
+    width: 70%;
+}
+#exampleInputEmail1{
+    border: none;
+}
+
+.mail-box button{
+    width: 25%;
+    background-color: #F2EDD8;
+    color: #297377;
+    letter-spacing: 2px;
+}
+.mail-box button:hover{
+    background-color: #D24B2B;
+    color: #E9CB66;
+}
+.mail-box button:focus{
+    display: none;
+}
+footer{
+    height: 100px;
+    background-color: #1E1E1E;
+}
+
+
+/* RWD------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------ */
 
 @media (max-width: 1199.98px) {
     .kv-pitch{
@@ -383,9 +745,32 @@ a.nav-link.scroll:hover{
         font-size: 1rem;
         padding: 10px 0px;
     }
+
+    .info-container{
+        width: 100%;
+        height: 100%;
+        background:url("./images/3x/info-pitch-pc-2.jpg") -1% -1% no-repeat, #56B8A5;
+        background-size: 101%;
+        
+    }
+
+    .tab-img{
+        background: url("./images/3x/table-1-m.png") right center no-repeat;
+        background-size: contain;
+        height: 180px;
+        margin-top: 5%;
+        right: -5%;
+    }
+
+    .tab-btn-box{
+        height: 150px;
+        top:20%;
+        left: 10%;
+    }
     
 }
-
+/* 991.98---------------------------
+--------------------------- */
 @media (max-width: 991.98px) {
     .kv-pitch-pc{
         transform: translateY(0px);
@@ -441,56 +826,144 @@ a.nav-link.scroll:hover{
                 /* width: 100%; */
             }
         }
-        .updown{
-            font-size: 5rem;
-        }
-        .quote-up{
-            position: absolute;
-            top: -7%;
-            left: 30%;
-        }
-        .quote-down{
-            position: absolute;
-            bottom: -15%;
-            left: 30%;
-        }
-        .quote-content{
-            position: absolute;
-            width: 70%;
-            left: 10%;
-            top: 10%;
-            line-height: 2rem;
         
-        }
-        .quote-name{
-            position: absolute;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            left: 15%;
-            bottom: 20%;
-        }
-        .quote-number{
-            position: absolute;
-            /* width: 8%; */
-            padding: 0px 5px 10px 5px;
-            font-size: 4rem;
-            line-height: 4rem;
-            right: 3%;
-            top: 6%;
+/* quote--------------------------- */
+    .updown{
+        font-size: 5rem;
+    }
+    .quote-up{
+        position: absolute;
+        top: -7%;
+        left: 30%;
+    }
+    .quote-down{
+        position: absolute;
+        bottom: -15%;
+        left: 30%;
+    }
+    .quote-content{
+        position: absolute;
+        width: 70%;
+        left: 7%;
+        top: 10%;
+        line-height: 2rem;
     
-           
-            
-        }
-        .quote-player{
-            position: absolute;
-            right: 5%;  
-            bottom: -5%;
-        }
- }
- 
+    }
+    .quote-name{
+        position: absolute;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        left: 7%;
+        bottom: 20%;
+    }
+    .quote-number{
+        position: absolute;
+        /* width: 8%; */
+        padding: 0px 5px 10px 5px;
+        font-size: 4rem;
+        line-height: 4rem;
+        right: 3%;
+        top: 6%;
+    }
+    .quote-player{
+        position: absolute;
+        right: 5%;  
+        bottom: -10%;
+    }
 
+/* quote--------------------------- */
+/* info--------------------------- */
+    .info-item{
+        /* margin: -3% 10%; */
+        color: #1E1E1E;
+        display: flex;
+        flex-direction: column;
+        margin: 5% 0; 
+    }
+    .info-title-number{
+        font-size: 10rem;
+        font-weight: 900;
+        font-style: italic;
+        line-height: 10rem;
+        letter-spacing: -.5rem ;
+        padding: 0 7% 0 7%;
+        /* padding: 2%; */
+    }
+    .info-title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 3% 0 ;
+        padding: 0 7% 0 7%;
+
+    }
+    .info-text{
+        font-size: .9rem;
+        line-height: 170%;
+        letter-spacing: 1px;
+        opacity: .7;
+        padding: 0 7% 0 7%;
+        
+    }
+
+    .info-minute{
+        margin: 60% 0 0 0;
+    }
+
+/* info--------------------------- */
+
+    .tab-img{
+        background: url("./images/3x/table-1-m.png") right center no-repeat;
+        background-size: contain;
+        height: 140px;
+        margin-top: 5%;
+        right: -5%;
+    }
+    .rules-img{
+        height: 200px;
+        border-radius: 5px 5px 0 0 ;
+    }
+    .rules-content{
+        height: 200px;
+        border-radius: 0 0 5px 5px ;
+    }
+    .rules-content h3{
+        padding: 2% 5% 0 5%;
+        font-weight: 700;
+        font-size: 1.2rem;
+        
+    }
+    .rules-content p{
+        padding: 0 5%;
+        font-size: .8rem;
+        font-weight: 300;
+        line-height: 170%;
+        text-align: justify;
+        opacity: .8;
+    }
+
+    .xl-title{
+        font-size: 2rem;
+        letter-spacing: .2rem;
+        font-weight: 300;
+        margin-bottom: 5%;
+    }
+    .mm-title{
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        color: #1E1E1E;
+        opacity: .7;
+        font-weight: 300;
+        
+    }
+ }
+
+ 
+/* 767.98px---------------------------
+--------------------------- */
 
 @media (max-width: 767.98px) {
+   
+
     .kv-pitch-pc{
         transform: translateY(0px);
         right: -35%;
@@ -512,13 +985,7 @@ a.nav-link.scroll:hover{
             
         }
     }
-    .kv-pitch{
-        
-        width: 200%;
-        position: absolute;
-        right: -30%;
-        top: 47%;
-    }
+    
     .kv-heading{  
         font-size: 4rem;
         line-height: 2rem;
@@ -560,10 +1027,85 @@ a.nav-link.scroll:hover{
         background-size: contain;
     }
 
+    /* quote--------------------------- */
+    .updown{
+        font-size: 5rem;
+    }
+    .quote-up{
+        position: absolute;
+        top: -7%;
+        left: 30%;
+    }
+    .quote-down{
+        position: absolute;
+        bottom: -15%;
+        left: 30%;
+    }
+    .quote-content{
+        position: absolute;
+        width: 86%;
+        left: 7%;
+        top: 20%;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    
+    }
+    .quote-name{
+        
+        position: absolute;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        left: 5%;
+        bottom: 10%;
+    }
+    .quote-number{
+        position: absolute;
+        /* width: 8%; */
+        padding: 0px 5px 10px 5px;
+        font-size: 3rem;
+        line-height: 3rem;
+        right: 3%;
+        top: 3%;
+    }
+    .quote-player{
+        height: 300px;
+        width: 60%;
+        position: absolute;
+        right: -3%;  
+        bottom: -5%;
+    }
+
+/* quote--------------------------- */
+    .tab-img{
+        background: url("./images/3x/table-1-m.png") right center no-repeat;
+        background-size: contain;
+        height: 250px;
+        margin-top: 5%;
+        right: -30%;
+    }
+
+    .info-table-football{
+        padding: 10% 0;
+        width: 100%;
+        height: 500px;
+        background: url("./images/3x/info-bottom-m.png") left 101% no-repeat, rgb(86, 184, 165);
+        background-size: 100%;
+    }
    
 }
-
+/* 575.98px---------------------------
+--------------------------- */
 @media (max-width: 575.98px) { 
+    .hero{
+        /* height: 100vh; */
+        height: 750px;
+        
+    }
+    .hero-bg{
+        background: linear-gradient(165deg, rgb(210,75,43)70%,rgb(86, 184, 165)70%),rgb(86, 184, 165);
+    }
+    
+    
     .kv-heading{  
         font-size: 2.5rem;
         line-height: 1.4rem;
@@ -572,11 +1114,19 @@ a.nav-link.scroll:hover{
         font-size: .8rem;
         padding: 5px 0px;
     }
+    .kv-pitch{
+        
+        width: 200%;
+        position: absolute;
+        right: -25%;
+        top: 60%;
+    }
+
     .kv-man{
-        width: 350px;
+        max-width: 95%;
         z-index: 2;
-        top: 40%;
-        right: 10%;
+        bottom: -5%;
+        left: -2%;
         animation: kv-man .4s .1s forwards ease-out;
         }
 
@@ -600,11 +1150,187 @@ a.nav-link.scroll:hover{
     .kv-rules{
         position: absolute;
         top: 12%;
-        right: 5%;
+        right: -1%;
         width: 25%;
         height: 20%;
         background: url("./images/3x/kv-rules-m.png") center center no-repeat;
         background-size: contain;
     }
+
+    /* quote--------------------------- */
+    .quote{
+        background-color: #1E1E1E;
+        /* height: 100vh; */
+        height: 700px;
+    }
+    .updown{
+        font-size: 4rem;
+    }
+    .quote-up{
+        position: absolute;
+        top: -6%;
+        left: 30%;
+    }
+    .quote-down{
+        position: absolute;
+        bottom: -12%;
+        left: 30%;
+    }
+    .quote-content{
+        position: absolute;
+        width: 86%;
+        left: 7%;
+        top: 15%;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    
+    }
+    .quote-name{
+        
+        position: absolute;
+        font-size: .9rem;
+        letter-spacing: 2px;
+        left: 7%;
+        bottom: 15%;
+    }
+    .quote-number{
+        position: absolute;
+        /* width: 8%; */
+        padding: 0px 5px 10px 5px;
+        font-size: 2rem;
+        line-height: 2rem;
+        right: 3%;
+        top: 3%;
+    }
+    .quote-player{
+        height: 300px;
+        width: 60%;
+        position: absolute;
+        right: -3%;  
+        bottom: -5%;
+    }
+
+    .quote-bg{
+        width: 90%;
+        max-width: 960px;
+        /* height: 500px; */
+        /* background-color: #eeeeee; */
+        /* border: 1px solid red; */
+        /* border-radius: 5px; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) ;
+    }
+
+/* quote--------------------------- */
+    .info{
+        height: 100%;
+        position: relative;
+    }
+    .info-container{
+        width: 100%;
+        height: 100%;
+        background:url("./images/3x/info-pitch-m-2.jpg") -1% -1% no-repeat, #56B8A5;
+        background-size: 103%;
+
+
+    }
+    .info-item{
+        /* margin: -3% 10%; */
+        color: #1E1E1E;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0;
+        padding: 10%;
+        
+        
+    }
+    .info-title-number{
+        font-size: 8rem;
+        font-weight: 900;
+        font-style: italic;
+        line-height: 10rem;
+        letter-spacing: -.5rem ;
+        padding: 0 7% 0 7%;
+        /* padding: 2%; */
+    }
+    .info-title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 3% 0 ;
+        padding: 0 7% 0 7%;
+
+    }
+    .info-text{
+        font-size: .9rem;
+        line-height: 170%;
+        letter-spacing: 1px;
+        opacity: .7;
+        padding: 0 7% 0 7%;
+        
+    }
+
+    .info-minute{
+        margin: 60% 0 0 0;
+    }
+
+    .tab-img{
+        background: url("./images/3x/table-1-mm.png") right center no-repeat;
+        background-size: contain;
+        height: 180px;
+        margin-top: 10%;
+        right: -7%;
+    }
+    .table-title h2{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .table-title h5{
+        text-align: center;
+        font-weight: 400;
+        font-size: .9rem;
+        letter-spacing: .2rem;
+    }
+    .xl-title{
+        font-size: 1.5em;
+        letter-spacing: .2rem;
+        font-weight: 300;
+        margin-bottom: 5%;
+    }
+    .mm-title{
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        color: #1E1E1E;
+        opacity: .7;
+        font-weight: 300;
+        
+    }
+    .btn-games h4{
+    
+        font-size: .8rem;
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: 400;
+        position: absolute;
+        top: 105%;
+        
+    }
+    .btn-games{
+        width: 100%;
+        height: 100px;
+        /* background-color: #fff; */
+        position: relative;
+        color: #DFDFDF;
+        
+    }
+    
+    
+    .btn-games:hover{
+        height: 130px;
+        color: #E9CB66;
+        /* box-shadow: 0px 0px 3px rgba(0,0,0,.3); */
+    }
+
 
  }
